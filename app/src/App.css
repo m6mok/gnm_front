@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .features-grid, .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .container {
+    flex-direction: column;
+  }
+
+  .hero-content, .hero-image {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .hero-content {
+    margin-bottom: 40px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-logo, .footer-links {
+    width: 100%;
+  }
+
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
+}
