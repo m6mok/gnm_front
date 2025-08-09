@@ -1,78 +1,73 @@
-.features-section {
+.activities-section {
   padding: 80px 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
-.features-grid {
+.activities-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
-.feature-card {
-  background-color: #fff;
+.activity-card {
+  background-color: #f9f9f9;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
+.activity-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.feature-image {
+.activity-image {
   height: 200px;
   overflow: hidden;
 }
 
-.feature-image img {
+.activity-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.feature-card:hover .feature-image img {
+.activity-card:hover .activity-image img {
   transform: scale(1.1);
 }
 
-.feature-content {
-  padding: 25px;
-}
-
-.feature-content h3 {
-  font-size: 20px;
+.activity-card h3 {
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin: 20px 20px 10px;
   color: #2E4053;
 }
 
-.feature-content p {
-  font-size: 15px;
+.activity-card p {
+  font-size: 14px;
   color: #666;
   line-height: 1.6;
+  padding: 0 20px 20px;
 }
 
-@media (max-width: 992px) {
-  .features-grid {
+@media (max-width: 1024px) {
+  .activities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 576px) {
-  .features-section {
+  .activities-section {
     padding: 60px 0;
   }
 
-  .feature-content h3 {
-    font-size: 18px;
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card h3 {
+    font-size: 16px;
   }
 }

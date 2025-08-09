@@ -1,3 +1,4 @@
+/* Базовые стили */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,9 +6,10 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
   color: #333;
+  background-color: #fafafa;
 }
 
 .container {
@@ -16,51 +18,55 @@ body {
   padding: 0 20px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2E4053;
+  margin-bottom: 15px;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #56A159;
+  margin: 0 auto;
+}
+
+/* Отзывчивый дизайн */
 @media (max-width: 1024px) {
-  .features-grid, .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .section-header h2 {
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
-  .features-grid, .testimonials-grid {
-    grid-template-columns: 1fr;
+  .section-header h2 {
+    font-size: 28px;
   }
+}
 
-  .hero .container {
-    flex-direction: column;
-  }
-
-  .hero-content, .hero-image {
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .hero-content {
-    margin-bottom: 40px;
-  }
-
-  .contact-wrapper {
-    flex-direction: column;
-  }
-
-  .footer-content {
-    flex-direction: column;
-  }
-
-  .footer-logo, .footer-links {
-    width: 100%;
-  }
-
-  .footer-logo {
-    margin-bottom: 30px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-  }
-
-  .footer-column {
-    margin-bottom: 30px;
+@media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 24px;
   }
 }

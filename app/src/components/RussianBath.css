@@ -1,0 +1,137 @@
+.bath-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.bath-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.bath-gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  height: 500px;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item.main {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.gallery-item.secondary {
+  height: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.bath-info {
+  flex: 1;
+}
+
+.bath-info > p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.bath-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bath-features .feature {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bath-features .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bath-features .feature h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2E4053;
+}
+
+.bath-features .feature p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.book-bath-btn {
+  background-color: #56A159;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.book-bath-btn:hover {
+  background-color: #458949;
+}
+
+@media (max-width: 992px) {
+  .bath-content {
+    flex-direction: column;
+  }
+
+  .bath-gallery, .bath-info {
+    flex: none;
+    width: 100%;
+  }
+
+  .bath-gallery {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bath-section {
+    padding: 60px 0;
+  }
+
+  .bath-gallery {
+    height: 350px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .gallery-item.main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

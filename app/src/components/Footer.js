@@ -1,58 +1,44 @@
 import React from 'react';
 import './Footer.css';
-import footerLogo from '../assets/logo.png';
+import footerLogo from '../assets/logo.jpg';
+import VkIcon from './icons/VkIcon';
+import TelegramIcon from './icons/TelegramIcon';
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-logo">
-            <img src={footerLogo} alt="Компания" />
-            <p>Мы создаем инновационные решения для улучшения вашего бизнеса</p>
+          <div className="footer-info">
+            <div className="footer-logo">
+              <img src={footerLogo} alt="Наше Место" />
+              <span>Наше Место</span>
+            </div>
+            <p>Глэмпинг и русская баня «Правильная баня» в 120 км от Москвы. 3 уютных домика, 40 га природы, незабываемые впечатления!</p>
+            <div className="footer-social">
+              <a href="https://vk.com/ppnm1" aria-label="Вконтакте" target="_blank" rel="noopener noreferrer">
+                <VkIcon />
+              </a>
+              <a href="https://t.me/banya_nm" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                <TelegramIcon />
+              </a>
+            </div>
           </div>
 
           <div className="footer-links">
             <div className="footer-column">
-              <h4>О компании</h4>
-              <ul>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#team">Команда</a></li>
-                <li><a href="#careers">Карьера</a></li>
-                <li><a href="#press">Пресса</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-column">
-              <h4>Продукты</h4>
-              <ul>
-                <li><a href="#product1">Продукт 1</a></li>
-                <li><a href="#product2">Продукт 2</a></li>
-                <li><a href="#product3">Продукт 3</a></li>
-                <li><a href="#pricing">Цены</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-column">
-              <h4>Поддержка</h4>
-              <ul>
-                <li><a href="#help">Центр помощи</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Контакты</a></li>
-                <li><a href="#tutorials">Руководства</a></li>
+              <h4>Контакты</h4>
+              <ul className="contact-info">
+                <li><i className="icon-location"></i> Московская область, городской округ Кашира, вблизи п. Большое Руново</li>
+                <li><i className="icon-phone"></i> <a href='tel:+79257153575'>+7 (925) 715-35-75</a></li>
+                <li><i className="icon-email"></i> <a href='mailto:picnik-park@yandex.ru'>picnik-park@yandex.ru</a></li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2023 Название компании. Все права защищены.</p>
-          <div className="footer-social">
-            <a href="#facebook"><i className="icon-facebook"></i></a>
-            <a href="#twitter"><i className="icon-twitter"></i></a>
-            <a href="#instagram"><i className="icon-instagram"></i></a>
-            <a href="#linkedin"><i className="icon-linkedin"></i></a>
-          </div>
+          <p>&copy; 2025 ИП Дементьев А.В.</p>
         </div>
       </div>
     </footer>

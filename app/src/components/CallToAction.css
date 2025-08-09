@@ -1,23 +1,22 @@
-.hero {
+.cta-section {
   position: relative;
-  height: 100vh;
+  height: 500px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 70px;
 }
 
-.hero-overlay {
+.cta-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-.hero-content {
+.cta-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
@@ -27,27 +26,27 @@
   color: white;
 }
 
-.hero h1 {
-  font-size: 48px;
+.cta-content h2 {
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 1.3;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero p {
-  font-size: 20px;
+.cta-content p {
+  font-size: 18px;
   margin-bottom: 30px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.hero-buttons {
+.cta-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.primary-btn {
+.cta-primary-btn {
   background-color: #56A159;
   color: white;
   border: none;
@@ -58,11 +57,11 @@
   transition: background-color 0.3s ease;
 }
 
-.primary-btn:hover {
+.cta-primary-btn:hover {
   background-color: #458949;
 }
 
-.secondary-btn {
+.cta-secondary-btn {
   background-color: transparent;
   color: white;
   border: 2px solid white;
@@ -73,11 +72,11 @@
   transition: all 0.3s ease;
 }
 
-.secondary-btn:hover {
+.cta-secondary-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.hero-image {
+.cta-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,33 +85,37 @@
   z-index: 0;
 }
 
-.hero-image img {
+.cta-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 36px;
+  .cta-section {
+    height: 450px;
   }
 
-  .hero p {
-    font-size: 18px;
+  .cta-content h2 {
+    font-size: 28px;
   }
 
-  .hero-buttons {
+  .cta-content p {
+    font-size: 16px;
+  }
+
+  .cta-buttons {
     flex-direction: column;
     gap: 10px;
   }
 }
 
 @media (max-width: 576px) {
-  .hero h1 {
-    font-size: 28px;
+  .cta-section {
+    height: 400px;
   }
 
-  .hero p {
-    font-size: 16px;
+  .cta-content h2 {
+    font-size: 24px;
   }
 }
